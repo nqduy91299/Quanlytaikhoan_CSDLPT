@@ -38,7 +38,7 @@ namespace QLTaiKhoanApp
 
         private void login_btn_Click(object sender, EventArgs e)
         {
-            MainForm mainform = new MainForm();
+            MainFormAdmin mainform = new MainFormAdmin();
             this.Hide();
             mainform.ShowDialog();
             this.Show();

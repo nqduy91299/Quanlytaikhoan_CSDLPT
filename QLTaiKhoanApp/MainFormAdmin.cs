@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLTaiKhoanApp
 {
-    public partial class MainForm : Form
+    public partial class MainFormAdmin : Form
     {
-        public MainForm()
+        public MainFormAdmin()
         {
             InitializeComponent();
         }
