@@ -37,13 +37,11 @@
             this.maGDV_PGT_cbb = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.cmnd_PGT_tb = new System.Windows.Forms.TextBox();
-            this.dateTimePicker_ngaySinh_PGT = new System.Windows.Forms.DateTimePicker();
             this.diachi_PGT_tb = new System.Windows.Forms.TextBox();
             this.tenKH_PGT_tb = new System.Windows.Forms.TextBox();
             this.maKH_PGT_tb = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.laiSuat_PGT_cbb = new System.Windows.Forms.ComboBox();
@@ -71,8 +69,7 @@
             this.lAISUATBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lAISUATTableAdapter = new QLTaiKhoanApp.QLTKDataSetTableAdapters.LAISUATTableAdapter();
             this.dICHVUBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.label16 = new System.Windows.Forms.Label();
-            this.dateTimePicker_ngayCap_PGT = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fKLAISUATMADV4F7CD00DBindingSource)).BeginInit();
@@ -126,18 +123,14 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dateTimePicker_ngayCap_PGT);
-            this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.maGDV_PGT_cbb);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.cmnd_PGT_tb);
-            this.groupBox1.Controls.Add(this.dateTimePicker_ngaySinh_PGT);
             this.groupBox1.Controls.Add(this.diachi_PGT_tb);
             this.groupBox1.Controls.Add(this.tenKH_PGT_tb);
             this.groupBox1.Controls.Add(this.maKH_PGT_tb);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Location = new System.Drawing.Point(131, 296);
@@ -155,6 +148,7 @@
             this.maGDV_PGT_cbb.Name = "maGDV_PGT_cbb";
             this.maGDV_PGT_cbb.Size = new System.Drawing.Size(384, 45);
             this.maGDV_PGT_cbb.TabIndex = 22;
+            this.maGDV_PGT_cbb.SelectedIndexChanged += new System.EventHandler(this.maGDV_PGT_cbb_SelectedIndexChanged);
             // 
             // label15
             // 
@@ -168,20 +162,11 @@
             // 
             // cmnd_PGT_tb
             // 
-            this.cmnd_PGT_tb.Location = new System.Drawing.Point(314, 416);
+            this.cmnd_PGT_tb.Location = new System.Drawing.Point(313, 353);
             this.cmnd_PGT_tb.Margin = new System.Windows.Forms.Padding(7);
             this.cmnd_PGT_tb.Name = "cmnd_PGT_tb";
             this.cmnd_PGT_tb.Size = new System.Drawing.Size(484, 44);
             this.cmnd_PGT_tb.TabIndex = 20;
-            // 
-            // dateTimePicker_ngaySinh_PGT
-            // 
-            this.dateTimePicker_ngaySinh_PGT.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_ngaySinh_PGT.Location = new System.Drawing.Point(314, 340);
-            this.dateTimePicker_ngaySinh_PGT.Margin = new System.Windows.Forms.Padding(7);
-            this.dateTimePicker_ngaySinh_PGT.Name = "dateTimePicker_ngaySinh_PGT";
-            this.dateTimePicker_ngaySinh_PGT.Size = new System.Drawing.Size(484, 44);
-            this.dateTimePicker_ngaySinh_PGT.TabIndex = 19;
             // 
             // diachi_PGT_tb
             // 
@@ -204,13 +189,13 @@
             this.maKH_PGT_tb.Location = new System.Drawing.Point(314, 81);
             this.maKH_PGT_tb.Margin = new System.Windows.Forms.Padding(7);
             this.maKH_PGT_tb.Name = "maKH_PGT_tb";
-            this.maKH_PGT_tb.Size = new System.Drawing.Size(398, 44);
+            this.maKH_PGT_tb.Size = new System.Drawing.Size(484, 44);
             this.maKH_PGT_tb.TabIndex = 15;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(14, 423);
+            this.label8.Location = new System.Drawing.Point(13, 360);
             this.label8.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(170, 37);
@@ -226,16 +211,6 @@
             this.label7.Size = new System.Drawing.Size(124, 37);
             this.label7.TabIndex = 6;
             this.label7.Text = "Dia chi:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 340);
-            this.label6.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(169, 37);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Ngay sinh:";
             // 
             // label5
             // 
@@ -337,6 +312,7 @@
             this.comboBox_maDV_PGT.Size = new System.Drawing.Size(170, 45);
             this.comboBox_maDV_PGT.TabIndex = 23;
             this.comboBox_maDV_PGT.ValueMember = "MADV";
+            this.comboBox_maDV_PGT.SelectedIndexChanged += new System.EventHandler(this.comboBox_maDV_PGT_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -400,6 +376,7 @@
             this.lapphieumoi_PGT_btn.TabIndex = 9;
             this.lapphieumoi_PGT_btn.Text = "Lap Phieu Moi";
             this.lapphieumoi_PGT_btn.UseVisualStyleBackColor = false;
+            this.lapphieumoi_PGT_btn.Click += new System.EventHandler(this.lapphieumoi_PGT_btn_Click);
             // 
             // xoaphieu_PGT_btn
             // 
@@ -472,6 +449,7 @@
             this.dateTimePicker_ngayGui_PGT.Name = "dateTimePicker_ngayGui_PGT";
             this.dateTimePicker_ngayGui_PGT.Size = new System.Drawing.Size(504, 44);
             this.dateTimePicker_ngayGui_PGT.TabIndex = 22;
+            this.dateTimePicker_ngayGui_PGT.ValueChanged += new System.EventHandler(this.dateTimePicker_ngayGui_PGT_ValueChanged);
             // 
             // dICHVUTableAdapter
             // 
@@ -491,23 +469,18 @@
             this.dICHVUBindingSource1.DataMember = "DICHVU";
             this.dICHVUBindingSource1.DataSource = this.qLTKDataSet;
             // 
-            // label16
+            // button1
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(862, 419);
-            this.label16.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(162, 37);
-            this.label16.TabIndex = 23;
-            this.label16.Text = "Ngay cap:";
-            // 
-            // dateTimePicker_ngayCap_PGT
-            // 
-            this.dateTimePicker_ngayCap_PGT.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_ngayCap_PGT.Location = new System.Drawing.Point(1051, 412);
-            this.dateTimePicker_ngayCap_PGT.Name = "dateTimePicker_ngayCap_PGT";
-            this.dateTimePicker_ngayCap_PGT.Size = new System.Drawing.Size(407, 44);
-            this.dateTimePicker_ngayCap_PGT.TabIndex = 25;
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.CausesValidation = false;
+            this.button1.Location = new System.Drawing.Point(1646, 932);
+            this.button1.Margin = new System.Windows.Forms.Padding(7);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(335, 102);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "DSKH";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // PhieuGuiTien
             // 
@@ -515,6 +488,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(2092, 1186);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker_ngayGui_PGT);
             this.Controls.Add(this.soTienGui_PGT_tb);
             this.Controls.Add(this.maPhieu_PGT_tb);
@@ -560,7 +534,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label10;
@@ -570,7 +543,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox cmnd_PGT_tb;
-        private System.Windows.Forms.DateTimePicker dateTimePicker_ngaySinh_PGT;
         private System.Windows.Forms.TextBox diachi_PGT_tb;
         private System.Windows.Forms.TextBox tenKH_PGT_tb;
         private System.Windows.Forms.TextBox maKH_PGT_tb;
@@ -595,7 +567,6 @@
         private System.Windows.Forms.ComboBox tenDV_PGT_cbb;
         private System.Windows.Forms.BindingSource dICHVUBindingSource1;
         private System.Windows.Forms.BindingSource fKLAISUATMADV4F7CD00DBindingSource;
-        private System.Windows.Forms.DateTimePicker dateTimePicker_ngayCap_PGT;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -59,6 +59,7 @@
             this.button4.TabIndex = 3;
             this.button4.Text = "Lập Report";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -89,17 +90,19 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(780, 421);
             this.button1.TabIndex = 0;
-            this.button1.Text = "In Danh Sách Khách Hàng";
+            this.button1.Text = "Danh Sách Khách Hàng";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Exit_mainform_btn
             // 
-            this.Exit_mainform_btn.Location = new System.Drawing.Point(1866, 209);
+            this.Exit_mainform_btn.Location = new System.Drawing.Point(1866, 70);
             this.Exit_mainform_btn.Name = "Exit_mainform_btn";
             this.Exit_mainform_btn.Size = new System.Drawing.Size(304, 84);
             this.Exit_mainform_btn.TabIndex = 1;
             this.Exit_mainform_btn.Text = "Đăng Xuất";
             this.Exit_mainform_btn.UseVisualStyleBackColor = true;
+            this.Exit_mainform_btn.Click += new System.EventHandler(this.Exit_mainform_btn_Click);
             // 
             // label1
             // 

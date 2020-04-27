@@ -31,28 +31,26 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ngayCap_PRT_tb = new System.Windows.Forms.TextBox();
+            this.cmnd_PRT_tb = new System.Windows.Forms.TextBox();
+            this.diachi_PRT_tb = new System.Windows.Forms.TextBox();
+            this.ten_PRT_tb = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.ngayDenHan_PRT_tb = new System.Windows.Forms.TextBox();
+            this.ngayGui_PRT_tb = new System.Windows.Forms.TextBox();
+            this.soTienGui_PRT_tb = new System.Windows.Forms.TextBox();
+            this.laiSuat_PRT_tb = new System.Windows.Forms.TextBox();
+            this.kyHan_PRT_tb = new System.Windows.Forms.TextBox();
+            this.DV_PRT_tb = new System.Windows.Forms.TextBox();
+            this.maDV_PRT_tb = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.label100 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -62,13 +60,15 @@
             this.tinhtienlai_PRT_btn = new System.Windows.Forms.Button();
             this.lapphieurut_PRT_btn = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.tienLai_PRT_tb = new System.Windows.Forms.TextBox();
+            this.tongSoTienRut_PRT_tb = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.maPhieu_PRT_cbb = new System.Windows.Forms.ComboBox();
+            this.maGDV_PRT_cbb = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.dateTimePicker_PRT_ngayrut = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -89,7 +89,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(784, 240);
+            this.label2.Location = new System.Drawing.Point(382, 238);
             this.label2.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(157, 37);
@@ -98,68 +98,58 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox10);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.ngayCap_PRT_tb);
+            this.groupBox1.Controls.Add(this.cmnd_PRT_tb);
+            this.groupBox1.Controls.Add(this.diachi_PRT_tb);
+            this.groupBox1.Controls.Add(this.ten_PRT_tb);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(62, 310);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(7);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(7);
             this.groupBox1.Size = new System.Drawing.Size(969, 412);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
-            // textBox10
+            // ngayCap_PRT_tb
             // 
-            this.textBox10.Location = new System.Drawing.Point(235, 317);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(660, 44);
-            this.textBox10.TabIndex = 15;
+            this.ngayCap_PRT_tb.Location = new System.Drawing.Point(261, 282);
+            this.ngayCap_PRT_tb.Margin = new System.Windows.Forms.Padding(7);
+            this.ngayCap_PRT_tb.Name = "ngayCap_PRT_tb";
+            this.ngayCap_PRT_tb.Size = new System.Drawing.Size(660, 44);
+            this.ngayCap_PRT_tb.TabIndex = 15;
             // 
-            // textBox4
+            // cmnd_PRT_tb
             // 
-            this.textBox4.Location = new System.Drawing.Point(235, 247);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(660, 44);
-            this.textBox4.TabIndex = 14;
+            this.cmnd_PRT_tb.Location = new System.Drawing.Point(261, 212);
+            this.cmnd_PRT_tb.Margin = new System.Windows.Forms.Padding(7);
+            this.cmnd_PRT_tb.Name = "cmnd_PRT_tb";
+            this.cmnd_PRT_tb.Size = new System.Drawing.Size(660, 44);
+            this.cmnd_PRT_tb.TabIndex = 14;
             // 
-            // textBox3
+            // diachi_PRT_tb
             // 
-            this.textBox3.Location = new System.Drawing.Point(235, 178);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(660, 44);
-            this.textBox3.TabIndex = 13;
+            this.diachi_PRT_tb.Location = new System.Drawing.Point(261, 143);
+            this.diachi_PRT_tb.Margin = new System.Windows.Forms.Padding(7);
+            this.diachi_PRT_tb.Name = "diachi_PRT_tb";
+            this.diachi_PRT_tb.Size = new System.Drawing.Size(660, 44);
+            this.diachi_PRT_tb.TabIndex = 13;
             // 
-            // textBox2
+            // ten_PRT_tb
             // 
-            this.textBox2.Location = new System.Drawing.Point(235, 109);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(660, 44);
-            this.textBox2.TabIndex = 12;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(235, 39);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(161, 44);
-            this.textBox1.TabIndex = 11;
+            this.ten_PRT_tb.Location = new System.Drawing.Point(261, 74);
+            this.ten_PRT_tb.Margin = new System.Windows.Forms.Padding(7);
+            this.ten_PRT_tb.Name = "ten_PRT_tb";
+            this.ten_PRT_tb.Size = new System.Drawing.Size(660, 44);
+            this.ten_PRT_tb.TabIndex = 12;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(14, 324);
+            this.label7.Location = new System.Drawing.Point(40, 289);
             this.label7.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(162, 37);
@@ -169,7 +159,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 254);
+            this.label6.Location = new System.Drawing.Point(40, 219);
             this.label6.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(122, 37);
@@ -179,7 +169,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(14, 185);
+            this.label5.Location = new System.Drawing.Point(40, 150);
             this.label5.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(124, 37);
@@ -189,102 +179,92 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 116);
+            this.label4.Location = new System.Drawing.Point(40, 81);
             this.label4.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 37);
             this.label4.TabIndex = 7;
             this.label4.Text = "Họ tên:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 46);
-            this.label3.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 37);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Mã KH:";
-            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox12);
-            this.groupBox2.Controls.Add(this.textBox11);
-            this.groupBox2.Controls.Add(this.textBox9);
-            this.groupBox2.Controls.Add(this.textBox8);
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.textBox6);
-            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.ngayDenHan_PRT_tb);
+            this.groupBox2.Controls.Add(this.ngayGui_PRT_tb);
+            this.groupBox2.Controls.Add(this.soTienGui_PRT_tb);
+            this.groupBox2.Controls.Add(this.laiSuat_PRT_tb);
+            this.groupBox2.Controls.Add(this.kyHan_PRT_tb);
+            this.groupBox2.Controls.Add(this.DV_PRT_tb);
+            this.groupBox2.Controls.Add(this.maDV_PRT_tb);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.label100);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Location = new System.Drawing.Point(1109, 310);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(7);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(7);
             this.groupBox2.Size = new System.Drawing.Size(969, 541);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             // 
-            // textBox12
+            // ngayDenHan_PRT_tb
             // 
-            this.textBox12.Location = new System.Drawing.Point(268, 317);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(617, 44);
-            this.textBox12.TabIndex = 22;
+            this.ngayDenHan_PRT_tb.Location = new System.Drawing.Point(268, 317);
+            this.ngayDenHan_PRT_tb.Margin = new System.Windows.Forms.Padding(7);
+            this.ngayDenHan_PRT_tb.Name = "ngayDenHan_PRT_tb";
+            this.ngayDenHan_PRT_tb.Size = new System.Drawing.Size(617, 44);
+            this.ngayDenHan_PRT_tb.TabIndex = 22;
             // 
-            // textBox11
+            // ngayGui_PRT_tb
             // 
-            this.textBox11.Location = new System.Drawing.Point(271, 247);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(617, 44);
-            this.textBox11.TabIndex = 16;
+            this.ngayGui_PRT_tb.Location = new System.Drawing.Point(271, 247);
+            this.ngayGui_PRT_tb.Margin = new System.Windows.Forms.Padding(7);
+            this.ngayGui_PRT_tb.Name = "ngayGui_PRT_tb";
+            this.ngayGui_PRT_tb.Size = new System.Drawing.Size(617, 44);
+            this.ngayGui_PRT_tb.TabIndex = 16;
             // 
-            // textBox9
+            // soTienGui_PRT_tb
             // 
-            this.textBox9.Location = new System.Drawing.Point(271, 456);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(617, 44);
-            this.textBox9.TabIndex = 21;
+            this.soTienGui_PRT_tb.Location = new System.Drawing.Point(271, 456);
+            this.soTienGui_PRT_tb.Margin = new System.Windows.Forms.Padding(7);
+            this.soTienGui_PRT_tb.Name = "soTienGui_PRT_tb";
+            this.soTienGui_PRT_tb.Size = new System.Drawing.Size(617, 44);
+            this.soTienGui_PRT_tb.TabIndex = 21;
             // 
-            // textBox8
+            // laiSuat_PRT_tb
             // 
-            this.textBox8.Location = new System.Drawing.Point(271, 386);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(263, 44);
-            this.textBox8.TabIndex = 20;
+            this.laiSuat_PRT_tb.Location = new System.Drawing.Point(271, 386);
+            this.laiSuat_PRT_tb.Margin = new System.Windows.Forms.Padding(7);
+            this.laiSuat_PRT_tb.Name = "laiSuat_PRT_tb";
+            this.laiSuat_PRT_tb.Size = new System.Drawing.Size(614, 44);
+            this.laiSuat_PRT_tb.TabIndex = 20;
             // 
-            // textBox7
+            // kyHan_PRT_tb
             // 
-            this.textBox7.Location = new System.Drawing.Point(271, 178);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(617, 44);
-            this.textBox7.TabIndex = 19;
+            this.kyHan_PRT_tb.Location = new System.Drawing.Point(271, 178);
+            this.kyHan_PRT_tb.Margin = new System.Windows.Forms.Padding(7);
+            this.kyHan_PRT_tb.Name = "kyHan_PRT_tb";
+            this.kyHan_PRT_tb.Size = new System.Drawing.Size(617, 44);
+            this.kyHan_PRT_tb.TabIndex = 19;
             // 
-            // textBox6
+            // DV_PRT_tb
             // 
-            this.textBox6.Location = new System.Drawing.Point(271, 109);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(617, 44);
-            this.textBox6.TabIndex = 18;
+            this.DV_PRT_tb.Location = new System.Drawing.Point(271, 109);
+            this.DV_PRT_tb.Margin = new System.Windows.Forms.Padding(7);
+            this.DV_PRT_tb.Name = "DV_PRT_tb";
+            this.DV_PRT_tb.Size = new System.Drawing.Size(617, 44);
+            this.DV_PRT_tb.TabIndex = 18;
             // 
-            // textBox5
+            // maDV_PRT_tb
             // 
-            this.textBox5.Location = new System.Drawing.Point(271, 49);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(617, 44);
-            this.textBox5.TabIndex = 15;
+            this.maDV_PRT_tb.Location = new System.Drawing.Point(271, 49);
+            this.maDV_PRT_tb.Margin = new System.Windows.Forms.Padding(7);
+            this.maDV_PRT_tb.Name = "maDV_PRT_tb";
+            this.maDV_PRT_tb.Size = new System.Drawing.Size(617, 44);
+            this.maDV_PRT_tb.TabIndex = 15;
             // 
             // label14
             // 
@@ -316,15 +296,15 @@
             this.label12.TabIndex = 15;
             this.label12.Text = "Ngày đến hạn:";
             // 
-            // label11
+            // label100
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(14, 254);
-            this.label11.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(153, 37);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "Ngày gửi:";
+            this.label100.AutoSize = true;
+            this.label100.Location = new System.Drawing.Point(14, 254);
+            this.label100.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(153, 37);
+            this.label100.TabIndex = 14;
+            this.label100.Text = "Ngày gửi:";
             // 
             // label10
             // 
@@ -363,9 +343,9 @@
             this.groupBox3.Controls.Add(this.tinhtienlai_PRT_btn);
             this.groupBox3.Controls.Add(this.lapphieurut_PRT_btn);
             this.groupBox3.Location = new System.Drawing.Point(83, 865);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(7);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(7);
             this.groupBox3.Size = new System.Drawing.Size(948, 314);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
@@ -373,37 +353,40 @@
             // thoat_PRT_btn
             // 
             this.thoat_PRT_btn.Location = new System.Drawing.Point(546, 169);
-            this.thoat_PRT_btn.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.thoat_PRT_btn.Margin = new System.Windows.Forms.Padding(7);
             this.thoat_PRT_btn.Name = "thoat_PRT_btn";
             this.thoat_PRT_btn.Size = new System.Drawing.Size(332, 97);
             this.thoat_PRT_btn.TabIndex = 24;
             this.thoat_PRT_btn.Text = "Thoát";
             this.thoat_PRT_btn.UseVisualStyleBackColor = true;
+            this.thoat_PRT_btn.Click += new System.EventHandler(this.thoat_PRT_btn_Click);
             // 
             // ghi_PRT_btn
             // 
             this.ghi_PRT_btn.Location = new System.Drawing.Point(78, 169);
-            this.ghi_PRT_btn.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.ghi_PRT_btn.Margin = new System.Windows.Forms.Padding(7);
             this.ghi_PRT_btn.Name = "ghi_PRT_btn";
             this.ghi_PRT_btn.Size = new System.Drawing.Size(332, 97);
             this.ghi_PRT_btn.TabIndex = 23;
             this.ghi_PRT_btn.Text = "Ghi";
             this.ghi_PRT_btn.UseVisualStyleBackColor = true;
+            this.ghi_PRT_btn.Click += new System.EventHandler(this.ghi_PRT_btn_Click);
             // 
             // tinhtienlai_PRT_btn
             // 
             this.tinhtienlai_PRT_btn.Location = new System.Drawing.Point(546, 49);
-            this.tinhtienlai_PRT_btn.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tinhtienlai_PRT_btn.Margin = new System.Windows.Forms.Padding(7);
             this.tinhtienlai_PRT_btn.Name = "tinhtienlai_PRT_btn";
             this.tinhtienlai_PRT_btn.Size = new System.Drawing.Size(332, 97);
             this.tinhtienlai_PRT_btn.TabIndex = 22;
             this.tinhtienlai_PRT_btn.Text = "Tính Tiền Lãi";
             this.tinhtienlai_PRT_btn.UseVisualStyleBackColor = true;
+            this.tinhtienlai_PRT_btn.Click += new System.EventHandler(this.tinhtienlai_PRT_btn_Click);
             // 
             // lapphieurut_PRT_btn
             // 
             this.lapphieurut_PRT_btn.Location = new System.Drawing.Point(78, 49);
-            this.lapphieurut_PRT_btn.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.lapphieurut_PRT_btn.Margin = new System.Windows.Forms.Padding(7);
             this.lapphieurut_PRT_btn.Name = "lapphieurut_PRT_btn";
             this.lapphieurut_PRT_btn.Size = new System.Drawing.Size(332, 97);
             this.lapphieurut_PRT_btn.TabIndex = 21;
@@ -412,43 +395,35 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.textBox15);
-            this.groupBox4.Controls.Add(this.textBox14);
-            this.groupBox4.Controls.Add(this.textBox13);
+            this.groupBox4.Controls.Add(this.dateTimePicker_PRT_ngayrut);
+            this.groupBox4.Controls.Add(this.tienLai_PRT_tb);
+            this.groupBox4.Controls.Add(this.tongSoTienRut_PRT_tb);
             this.groupBox4.Controls.Add(this.label17);
             this.groupBox4.Controls.Add(this.label16);
             this.groupBox4.Controls.Add(this.label15);
             this.groupBox4.Location = new System.Drawing.Point(1109, 865);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(7);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(7);
             this.groupBox4.Size = new System.Drawing.Size(969, 314);
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
             // 
-            // textBox15
+            // tienLai_PRT_tb
             // 
-            this.textBox15.Location = new System.Drawing.Point(294, 62);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(593, 44);
-            this.textBox15.TabIndex = 25;
+            this.tienLai_PRT_tb.Location = new System.Drawing.Point(294, 141);
+            this.tienLai_PRT_tb.Margin = new System.Windows.Forms.Padding(7);
+            this.tienLai_PRT_tb.Name = "tienLai_PRT_tb";
+            this.tienLai_PRT_tb.Size = new System.Drawing.Size(593, 44);
+            this.tienLai_PRT_tb.TabIndex = 24;
             // 
-            // textBox14
+            // tongSoTienRut_PRT_tb
             // 
-            this.textBox14.Location = new System.Drawing.Point(294, 141);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(593, 44);
-            this.textBox14.TabIndex = 24;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(294, 220);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(593, 44);
-            this.textBox13.TabIndex = 23;
+            this.tongSoTienRut_PRT_tb.Location = new System.Drawing.Point(294, 220);
+            this.tongSoTienRut_PRT_tb.Margin = new System.Windows.Forms.Padding(7);
+            this.tongSoTienRut_PRT_tb.Name = "tongSoTienRut_PRT_tb";
+            this.tongSoTienRut_PRT_tb.Size = new System.Drawing.Size(593, 44);
+            this.tongSoTienRut_PRT_tb.TabIndex = 23;
             // 
             // label17
             // 
@@ -480,31 +455,65 @@
             this.label15.TabIndex = 18;
             this.label15.Text = "Ngày rút:";
             // 
-            // comboBox1
+            // maPhieu_PRT_cbb
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(1076, 234);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(353, 45);
-            this.comboBox1.TabIndex = 16;
+            this.maPhieu_PRT_cbb.FormattingEnabled = true;
+            this.maPhieu_PRT_cbb.Location = new System.Drawing.Point(678, 230);
+            this.maPhieu_PRT_cbb.Margin = new System.Windows.Forms.Padding(7);
+            this.maPhieu_PRT_cbb.Name = "maPhieu_PRT_cbb";
+            this.maPhieu_PRT_cbb.Size = new System.Drawing.Size(353, 45);
+            this.maPhieu_PRT_cbb.TabIndex = 16;
+            this.maPhieu_PRT_cbb.SelectedIndexChanged += new System.EventHandler(this.maPhieu_PRT_cbb_SelectedIndexChanged);
+            // 
+            // maGDV_PRT_cbb
+            // 
+            this.maGDV_PRT_cbb.FormattingEnabled = true;
+            this.maGDV_PRT_cbb.Location = new System.Drawing.Point(1403, 230);
+            this.maGDV_PRT_cbb.Margin = new System.Windows.Forms.Padding(7);
+            this.maGDV_PRT_cbb.Name = "maGDV_PRT_cbb";
+            this.maGDV_PRT_cbb.Size = new System.Drawing.Size(353, 45);
+            this.maGDV_PRT_cbb.TabIndex = 18;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(1107, 238);
+            this.label18.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(149, 37);
+            this.label18.TabIndex = 17;
+            this.label18.Text = "Mã GDV:";
+            // 
+            // dateTimePicker_PRT_ngayrut
+            // 
+            this.dateTimePicker_PRT_ngayrut.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker_PRT_ngayrut.Location = new System.Drawing.Point(294, 63);
+            this.dateTimePicker_PRT_ngayrut.Name = "dateTimePicker_PRT_ngayrut";
+            this.dateTimePicker_PRT_ngayrut.Size = new System.Drawing.Size(594, 44);
+            this.dateTimePicker_PRT_ngayrut.TabIndex = 19;
             // 
             // PhieuRutTien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2135, 1235);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.maGDV_PRT_cbb);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.maPhieu_PRT_cbb);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.Margin = new System.Windows.Forms.Padding(7);
+            this.MaximumSize = new System.Drawing.Size(2171, 1338);
+            this.MinimumSize = new System.Drawing.Size(2171, 1338);
             this.Name = "PhieuRutTien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "e";
+            this.Load += new System.EventHandler(this.PhieuRutTien_Load);
+            this.InputLanguageChanging += new System.Windows.Forms.InputLanguageChangingEventHandler(this.PhieuRutTien_InputLanguageChanging);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -526,12 +535,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label100;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -540,25 +548,26 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox ngayCap_PRT_tb;
+        private System.Windows.Forms.TextBox cmnd_PRT_tb;
+        private System.Windows.Forms.TextBox diachi_PRT_tb;
+        private System.Windows.Forms.TextBox ten_PRT_tb;
+        private System.Windows.Forms.TextBox ngayDenHan_PRT_tb;
+        private System.Windows.Forms.TextBox ngayGui_PRT_tb;
+        private System.Windows.Forms.TextBox soTienGui_PRT_tb;
+        private System.Windows.Forms.TextBox laiSuat_PRT_tb;
+        private System.Windows.Forms.TextBox kyHan_PRT_tb;
+        private System.Windows.Forms.TextBox DV_PRT_tb;
+        private System.Windows.Forms.TextBox maDV_PRT_tb;
         private System.Windows.Forms.Button thoat_PRT_btn;
         private System.Windows.Forms.Button ghi_PRT_btn;
         private System.Windows.Forms.Button tinhtienlai_PRT_btn;
         private System.Windows.Forms.Button lapphieurut_PRT_btn;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox tienLai_PRT_tb;
+        private System.Windows.Forms.TextBox tongSoTienRut_PRT_tb;
+        private System.Windows.Forms.ComboBox maPhieu_PRT_cbb;
+        private System.Windows.Forms.ComboBox maGDV_PRT_cbb;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_PRT_ngayrut;
     }
 }

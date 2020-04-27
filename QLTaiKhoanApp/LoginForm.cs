@@ -67,7 +67,6 @@ namespace QLTaiKhoanApp
                 MainFormAdmin mainform = new MainFormAdmin();
                 this.Hide();
                 mainform.ShowDialog();
-                this.Show();
             }
 
         }

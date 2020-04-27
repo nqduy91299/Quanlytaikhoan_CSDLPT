@@ -31,59 +31,69 @@ namespace QLTaiKhoanApp
 
         private void thoat_PGT_btn_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            MainFormAdmin lgf = new MainFormAdmin();
+            this.Hide();
+            lgf.Show();
         }
 
         private void PhieuGuiTien_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Bạn muốn thoát khỏi chương trình này? Mọi thông tin sẽ không được lưu lại", "Thông Báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
-            {
-                e.Cancel = true;
-            }
+            
         }
 
         private void ghi_PGT_btn_Click(object sender, EventArgs e)
         {
-            //string maPhieu = maPhieu_PGT_tb.Text;
-            //string ngayGui = dateTimePicker_ngayGui_PGT.Value.ToString();
+            string maPhieu = maPhieu_PGT_tb.Text;
+            string ngayGui = dateTimePicker_ngayGui_PGT.Value.ToString("d");
             string maKH = maKH_PGT_tb.Text;
-            //string maGDV = maGDV_PGT_cbb.SelectedItem.ToString();
+            string maGDV_LPG = maGDV_PGT_cbb.Text;
             string tenKH = tenKH_PGT_tb.Text;
             string diachi = diachi_PGT_tb.Text;
-            string ngaysinh = dateTimePicker_ngaySinh_PGT.Value.ToString();
-            string cmnd = cmnd_PGT_tb.Text;
-            string ngaycap = dateTimePicker_ngayCap_PGT.Value.ToString();
-            /*
-            string maDV = comboBox_maDV_PGT.SelectedItem.ToString();
-            string tenDV = tenDV_PGT_cbb.SelectedItem.ToString();
-            string kyHan = kyHan_num_PGT_cbb.SelectedItem.ToString();
-            string laiSuat = laiSuat_PGT_cbb.SelectedItem.ToString();
-            string denHan = denHan_PGT_tb.Text;
-            */
 
-            string sotienGui = soTienGui_PGT_tb.Text;
-            Console.WriteLine(getmaGDV().Rows[0]["MACN"].ToString());
-            InsertKH(tenKH, ngaycap, cmnd, diachi, getmaGDV().Rows[0]["MACN"].ToString());
+            string cmnd = cmnd_PGT_tb.Text;
+
+            
+            string maDV = comboBox_maDV_PGT.Text;
+            string tenDV = tenDV_PGT_cbb.Text;
+            string kyHan = kyHan_num_PGT_cbb.Text;
+            string laiSuat = laiSuat_PGT_cbb.Text;
+            string denHan = denHan_PGT_tb.Text;
+            int tienLai = 0;
+
+            string soTienGui = soTienGui_PGT_tb.Text;
+
+            string ngayrut = "";
+
+            Console.WriteLine("Ngay gui: " + ngayGui);
+            Console.WriteLine("Ngay den han: " + denHan);
+            Console.WriteLine("maDV: " + maDV);
+            Console.WriteLine("maGDV: " + maGDV_LPG);
+            Console.WriteLine("tien gui: " + soTienGui);
+
+           
+
+            if (InsertPhieu(maPhieu, cmnd, maDV, ngayGui, laiSuat, soTienGui, maGDV_LPG, denHan, tienLai))
+            {
+                MessageBox.Show("Ghi Phiếu Thành Công");
+            }
+            else
+            {
+                MessageBox.Show("Ghi Phiếu that bai");
+            }
+
+
 
 
         }
 
-        public void InsertKH(string hoten, string ngaycap, string cmnd, string diachi, string maCN)
+        bool InsertPhieu(string maPhieu, string cmnd, string maDV, string ngayGui, string laiSuat, string soTienGui, string maGDV_LPG, string ngayDenHan, int tienLai)                                                              //MAPHIEU,CMND,MADV,NGAYGUI,LAISUAT,SOTIEN_GUI,NGAYDENHAN,MAGDV_LPG,NGAYRUT,TIENLAI,MAGDV_LPR
         {
-            string query = String.Format("INSERT INTO KHACHHANG VALUES(N'{0}', N'{1}', '{2}', '{3}', '{4}'", hoten, diachi, cmnd, ngaycap, maCN);
-
-            SqlConnection conn = new SqlConnection(@"Data Source =" + DataProvider.getDtb(LoginForm.chinhanh) + "; Initial Catalog = QLTK;User ID=" + LoginForm.uname + ";Password=" + LoginForm.passwd);
-            SqlCommand comm;
-            Console.WriteLine(DataProvider.getDtb(LoginForm.chinhanh));
-            Console.WriteLine(LoginForm.uname);
-            Console.WriteLine(LoginForm.passwd);
-
-            conn.Open();
-            comm = new SqlCommand(query, conn);
-            comm.ExecuteNonQuery();
-            MessageBox.Show("Them KH Thanh công");
-            conn.Close();
-    }
+            string query = String.Format("INSERT INTO PHIEU (MAPHIEU,CMND,MADV,NGAYGUI,LAISUAT,SOTIEN_GUI,NGAYDENHAN,MAGDV_LPG,NGAYRUT,TIENLAI,MAGDV_LPR) VALUES ('{0}', '{1}', '{2}', '{3}', {4}, {5}, '{6}', '{7}', '{8}', {9}, '{10}')", maPhieu, cmnd, maDV, ngayGui, laiSuat, soTienGui, ngayDenHan, maGDV_LPG , ngayDenHan, tienLai, maGDV_LPG);
+                     
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+        
 
         private void PhieuGuiTien_Load(object sender, EventArgs e)
         {
@@ -118,15 +128,43 @@ namespace QLTaiKhoanApp
         public void calculateDate()
         {
             DateTime ngaygui = dateTimePicker_ngayGui_PGT.Value;
-            string ngaydenhan = denHan_PGT_tb.Text;
             int kyHan = Int32.Parse(kyHan_num_PGT_cbb.Text);
+            Console.WriteLine(kyHan);
 
             DateTime hannhan = ngaygui.AddMonths(kyHan);
 
-            denHan_PGT_tb.Text = hannhan.ToString();
+            denHan_PGT_tb.Text = hannhan.ToString("d");
         }
 
         private void PhieuGuiTien_InputLanguageChanging(object sender, InputLanguageChangingEventArgs e)
+        {
+
+        }
+
+        private void maGDV_PGT_cbb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string maGDV_LPG = maGDV_PGT_cbb.SelectedItem.ToString();
+            Console.WriteLine(maGDV_LPG);
+        }
+
+        private void dateTimePicker_ngayGui_PGT_ValueChanged(object sender, EventArgs e)
+        {
+            calculateDate();
+        }
+
+        private void comboBox_maDV_PGT_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            calculateDate();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DSKH dskh = new DSKH();
+            dskh.Show();
+        }
+
+        private void lapphieumoi_PGT_btn_Click(object sender, EventArgs e)
         {
 
         }

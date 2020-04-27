@@ -54,6 +54,12 @@
     </Compile>
     <Compile Include="DAO\accountDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DSKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DSKH.Designer.cs">
+      <DependentUpon>DSKH.cs</DependentUpon>
+    </Compile>
     <Compile Include="PhieuRutTien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,8 +91,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLTKDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminChonChiNhanh.resx">
       <DependentUpon>AdminChonChiNhanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DSKH.resx">
+      <DependentUpon>DSKH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PhieuGuiTien.resx">
       <DependentUpon>PhieuGuiTien.cs</DependentUpon>
@@ -109,6 +124,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReportForm.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

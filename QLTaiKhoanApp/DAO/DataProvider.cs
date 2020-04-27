@@ -72,13 +72,15 @@ namespace QLTaiKhoanApp.DAO
         public int ExecuteNonQuery(string query, object[] element = null)
         {
             string str = @"Data Source =" + getDtb(LoginForm.chinhanh) + "; Initial Catalog = QLTK;User ID=" + LoginForm.uname + ";Password=" + LoginForm.passwd;
-            int data = 0;
+            int data;
             //Đảm bảo việc thực thi
             using (SqlConnection conn = new SqlConnection(str))
             {
+                data = 0;
                 conn.Open();
                 ////Thực thi câu truy vấn
                 SqlCommand command = new SqlCommand(query, conn);
+                Console.WriteLine("Open connect..");
 
                 if (element != null)
                 {
@@ -96,8 +98,9 @@ namespace QLTaiKhoanApp.DAO
 
 
 
-
                 data = command.ExecuteNonQuery();
+               
+                Console.WriteLine(data);
                 conn.Close();
             }
             return data;

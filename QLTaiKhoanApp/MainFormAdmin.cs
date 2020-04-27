@@ -34,5 +34,25 @@ namespace QLTaiKhoanApp
             PhieuGuiTien pgt = new PhieuGuiTien();
             pgt.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DSKH dskh = new DSKH();
+            dskh.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ReportForm rp = new ReportForm();
+            rp.ShowDialog();
+        }
+
+        private void Exit_mainform_btn_Click(object sender, EventArgs e)
+        {
+            LoginForm lgf = new LoginForm();
+            this.Hide();
+            lgf.Show();
+
+        }
     }
 }
