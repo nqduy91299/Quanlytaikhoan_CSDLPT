@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLTaiKhoanApp.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,10 @@ namespace QLTaiKhoanApp
 {
     public partial class LoginForm : Form
     {
+        public static string chinhanh;
+        public static string uname;
+        public static string passwd;
+
         public LoginForm()
         {
             InitializeComponent();
@@ -36,12 +41,41 @@ namespace QLTaiKhoanApp
             }
         }
 
+        public bool checklogin()
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM CHINHANH");
+            if(data.Rows.Count > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         private void login_btn_Click(object sender, EventArgs e)
         {
-            MainFormAdmin mainform = new MainFormAdmin();
-            this.Hide();
-            mainform.ShowDialog();
-            this.Show();
+
+            chinhanh = Login_chinhanh_cbb.SelectedItem.ToString();
+            uname = username.Text;
+            passwd = password.Text;
+
+
+            if (checklogin())
+            {
+                MainFormAdmin mainform = new MainFormAdmin();
+                this.Hide();
+                mainform.ShowDialog();
+                this.Show();
+            }
+
+        }
+
+        
+
+        private void Login_chinhanh_cbb_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }
